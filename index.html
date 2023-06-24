@@ -9,22 +9,22 @@
   <link rel="shortcut icon" href="favicon.ico">
 
   <!-- reset.css -->
-  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="/css/reset.css">
   <!-- fontawesome -->
-  <link rel="stylesheet" href="./css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
   <!-- drawer.css -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" media="screen and (max-width:767px)">
+<link rel="stylesheet" href="./css/drawer.min.css" media="screen and (max-width:767px)">
 <!-- jquery & iScroll -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+<script src="./js/jQuery.min.js"></script>
+<script src="./js/iscroll.min.js"></script>
 <!-- drawer.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+<script src="./js/drawer.min.js"></script>
 <!-- wow -->
-<script src="./js/wow.min.js"></script>
-<link rel="stylesheet" href="./css/animate.css">
+<script src="/js/wow.min.js"></script>
+<link rel="stylesheet" href="/css/animate.css">
 <!-- original -->
-<link rel="stylesheet" href="./css/style.css">
-<script src="./js/script.js"></script>
+<link rel="stylesheet" href="/css/style.css">
+<script src="/js/script.js"></script>
 </head>
 <body class="drawer drawer--right">
   <header class="header">
@@ -37,7 +37,7 @@
       <nav class="drawer-nav header-nav">
         <ul class="drawer-menu header-nav-list">
           <li class="header-nav-item">
-            <a class="header-nav-item-link is-active" href="#top">TOP</a>
+            <a class="header-nav-item-link" href="#top">TOP</a>
           </li>
           <li class="header-nav-item">
             <a class="header-nav-item-link" href="#skill">Skill</a>
@@ -71,8 +71,10 @@
         <p class="util-title-sub">スキル</p>
         <div class="skill-message message">
           <div class="icon"><img src="./img/Certificate.png" alt=""></div>
-          <p class="message-text">私たちはチームですので、さまざまなスキルを持っています。<br>
-            これらのスキルで、多くのご希望を叶えることができます。</p>
+          <div class="message-text-inner">
+            <p class="message-text">私たちはチームですので、さまざまなスキルを持っています。<br>
+              これらのスキルで、多くのご希望を叶えることができます。</p>
+          </div>
         </div>
           <ul class="skill-lists">
             <li class="skill-nav-item skill-html">
@@ -114,8 +116,10 @@
           <p class="util-title-sub">料金</p>
           <div class="price-message message">
             <div class="icon"><img src="./img/Done.png" alt=""></div>
-            <p class="message-text">作成するWEBページによって、料金と納期が変わります。<br>
-              これらは目安にして頂き、詳しくはお問い合わせをお願いします。</p>
+            <div class="message-text-inner">
+              <p class="message-text">作成するWEBページによって、料金と納期が変わります。<br>
+                これらは目安にして頂き、詳しくはお問い合わせをお願いします。</p>
+            </div>
           </div>
             <div class="case-items">
               <div class="case-item">
@@ -209,11 +213,8 @@
                     </div>
                     <ul class="case-text">
                       <li>・トップページ + 5～10ページ</li>
-                      <li>・新着情報などの更新機能</li>
-                      <li>・お問い合わせフォームの設置</li>
                       <li>・スマホ対応（レスポンシブデザイン）</li>
                       <li>・オリジナルデザイン</li>
-                      <li>・SEO対策</li>
                       <li>・CMS（WordPress）の構築</li>
                     </ul>
                   </div>
@@ -262,14 +263,21 @@
         <p class="util-title-sub">メンバー</p>
         <div class="member-message message">
           <div class="icon"><img src="./img/People.png" alt=""></div>
-          <p class="message-text">多様性に富んだメンバーが所属しています。<br>
-            私たちはチームのため、納品後も断続的なフォローが可能です。</p>
+          <div class="message-text-inner">
+            <p class="message-text">多様性に富んだメンバーが所属しています。<br>
+              私たちはチームのため、納品後も断続的なフォローが可能です。
+            </p>
+          </div>
         </div>
           <div class="member-items">
             <div class="member-item">
               <div class="member-item-inner">
-                <h2 class="member-name">プロジェクトマネージャー</h2>
-                <p class="member-text">チームを率いて目標達成へ。丁寧なプロジェクト管理で信頼と成功を築きます。</p>
+                <div class="member-name-title">
+                  <h2 class="member-name">プロジェクトマネージャー</h2>
+                </div>
+                <div class="member-text-wrapper">
+                  <p class="member-text">チームを率いて目標達成へ。丁寧なプロジェクト管理で信頼と成功を築きます。</p>
+                </div>
                 <div class="member-skills">
                   <div class="member-skill">Java</div>
                   <div class="member-skill">PHP</div>
@@ -291,8 +299,12 @@
             </div>
             <div class="member-item">
               <div class="member-item-inner">
-                <h2 class="member-name">WEBコーダー</h2>
-                <p class="member-text">技術で美しくパフォーマンスの高いウェブサイトを創り上げます。お客様の魅力を引き出します。</p>
+                <div class="member-name-title">
+                  <h2 class="member-name">WEBコーダー</h2>
+                </div>
+                <div class="member-text-wrapper">
+                    <p class="member-text">技術で美しくパフォーマンスの高いウェブサイトを創り上げます。お客様の魅力を引き出します。</p>
+                </div>
                 <div class="member-skills">
                   <div class="member-skill">HTML</div>
                   <div class="member-skill">css</div>
@@ -311,8 +323,12 @@
             </div>
             <div class="member-item">
               <div class="member-item-inner">
-                <h2 class="member-name">WEBデザイナー</h2>
-                <p class="member-text">お客様の要望を満たし、利用者の心を掴む、魅力的なウェブサイトをデザインします。</p>
+                <div class="member-name-title">
+                  <h2 class="member-name">WEBデザイナー</h2>
+                </div>
+                <div class="member-text-wrapper">
+                  <p class="member-text">お客様の要望を満たし、利用者の心を掴む、魅力的なウェブサイトをデザインします。</p>
+                </div>
                 <div class="member-skills">
                   <div class="member-skill">HTML</div>
                   <div class="member-skill">css</div>
@@ -329,7 +345,7 @@
               <h2 class="member-recruit-title">WEB<span>3</span>.05<span2>メンバー募集中</span2></h2>
               <p class="member-recruit-text">リベシティでWEB開発を一緒に行ってくれるメンバーを募集しています。<br>一緒にWEB開発したい方はリベシティのチャットから申請をお願いします。</p>
               <div class="member-recruit-wrapper">
-                <a href="https://site.libecity.com/" class="member-recruit-ribecity"><img src="../img/ribecity.png" alt="ribecity"></a>
+                <a href="https://libecity.com/user_profile/RRPak77MnedRRAZvPTbB3Wj3Sx02" class="member-recruit-ribecity"><img src="../img/ribecity.png" alt="ribecity"></a>
               </div>
             </div>
       </div>
@@ -341,17 +357,19 @@
           <p class="util-title-sub">お問い合わせ</p>
           <div class="inquiry-message message">
             <div class="icon"><img src="./img/Communication.png" alt=""></div>
-            <p class="message-text">まずは何でもお気軽に、以下アカウントのDMへご相談ください。<br>私たちの技術で解決する可能性があります。</p>
+            <div class="message-text-inner">
+              <p class="message-text">まずは何でもお気軽に、以下アカウントのDMへご相談ください。<br>私たちの技術で解決する可能性があります。</p>
+            </div>
           </div>
           <div class="inquiry-inner">
             <div class="sns-link-items">
               <div class="sns-link-item wow fadeInUp">
                 <p class="sns-text">Twitter</p>
-                <a href="#" class="sns-link-twitter"><i class="fab fa-twitter" style="color: #4882e5;"></i></a>
+                <a href="https://twitter.com/answer3_05" class="sns-link-twitter"><i class="fab fa-twitter" style="color: #4882e5;"></i></a>
               </div>
               <div class="sns-link-item wow fadeInUp">
                 <p class="sns-text">リベシティ</p>
-                <a href="https://site.libecity.com/"><img class="sns-link" src="../img/miniryou.png" alt="ribecity"></a>
+                <a href="https://libecity.com/user_profile/RRPak77MnedRRAZvPTbB3Wj3Sx02"><img class="sns-link" src="../img/miniryou.png" alt="ribecity"></a>
               </div>
             </div>
           </div>
@@ -368,19 +386,19 @@
         <div class="footer-right">
           <ul class="footer-nav-list">
             <li class="footer-nav-item">
-              <a href="" class="footer-nav-item-link">TOP</a>
+              <a href="#top" class="footer-nav-item-link">TOP</a>
             </li>
             <li class="footer-nav-item">
-              <a href="" class="footer-nav-item-link">Skill</a>
+              <a href="#skill" class="footer-nav-item-link">Skill</a>
             </li>
             <li class="footer-nav-item">
-              <a href="" class="footer-nav-item-link">Price</a>
+              <a href="#price" class="footer-nav-item-link">Price</a>
             </li>
             <li class="footer-nav-item">
-              <a href="" class="footer-nav-item-link">Member</a>
+              <a href="#member" class="footer-nav-item-link">Member</a>
             </li>
             <li class="footer-nav-item">
-              <a href="" class="footer-nav-item-link">Inquiry</a>
+              <a href="#inquiry" class="footer-nav-item-link">Inquiry</a>
             </li>
           </ul>
         </div>

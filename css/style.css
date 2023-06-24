@@ -62,6 +62,13 @@ span {
   color: #D1495B;
 }
 
+a {
+  transition: all 0.3s ease 0s;
+}
+a:hover {
+  opacity: 0.7;
+}
+
 /*header
 ________________________*/
 .header {
@@ -189,7 +196,7 @@ _________________________*/
 
 .footer-logo {
   color: #fff;
-  font-size: 60px;
+  font-size: 50px;
   line-height: 60px;
   font-weight: 400;
   padding-top: 33px;
@@ -221,14 +228,30 @@ _________________________*/
   justify-content: center;
 }
 
+.footer-nav-item {
+  width: 85px;
+}
 .footer-nav-item + .footer-nav-item {
   margin-left: 21px;
 }
 
 .footer-nav-item-link {
+  text-align: center;
+  width: 100%;
   color: #fff;
   display: block;
   padding: 1em 0;
+  position: relative;
+  transition: all 0.3s ease 0s;
+}
+.footer-nav-item-link:hover::after, .footer-nav-item-link.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0px;
+  width: 100%;
+  height: 5px;
+  background: #D1495B;
 }
 @media screen and (min-width: 768px) {
   .footer-nav-item-link {
@@ -291,21 +314,17 @@ ________________________*/
   }
 }
 
+.message-text-inner {
+  padding: 12px 14px 12px;
+}
+
 .message-text {
   font-family: "Yu Mincho";
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 22px;
-  height: 56px;
-  padding: 14px 0px 0px 16px;
 }
-@media screen and (max-width: 767px) {
-  .message-text {
-    padding: 18px 0px 0px 25px;
-  }
-}
-
 /*util
 ________________________*/
 .util-title {
@@ -352,7 +371,7 @@ ________________________*/
 }
 @media screen and (max-width: 767px) {
   .top {
-    padding-top: 110%;
+    padding-top: 120%;
     background: url(../img/img.png) no-repeat center center/cover;
   }
 }
@@ -400,8 +419,8 @@ ________________________*/
 }
 @media screen and (max-width: 767px) {
   .top-message-title {
-    font-size: 51px;
-    margin-bottom: 15px;
+    font-size: 39px;
+    margin-bottom: 5px;
   }
 }
 
@@ -419,8 +438,8 @@ ________________________*/
 @media screen and (max-width: 767px) {
   .top-message-text {
     width: auto;
-    line-height: 33px;
-    font-size: 24px;
+    line-height: 18px;
+    font-size: 13px;
     margin-left: 0;
     text-align: center;
   }
@@ -576,7 +595,7 @@ number {
 
 .case-body {
   background: #fff;
-  height: 325px;
+  height: 375px;
 }
 @media screen and (max-width: 767px) {
   .case-body {
@@ -616,13 +635,13 @@ number {
 
 .case-lists {
   display: flex;
-  margin: 10px 0 17px;
+  margin: 10px 0 12px;
   width: 100%;
 }
 @media screen and (max-width: 767px) {
   .case-lists {
     display: block;
-    margin: 10px 0 17px;
+    margin: 10px 0 0;
   }
 }
 
@@ -655,7 +674,7 @@ number {
   font-family: "Yu Gothic";
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 17px;
   line-height: 38px;
   color: #D1495B;
 }
@@ -695,7 +714,7 @@ number {
   font-family: "Yu Gothic";
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 17px;
   line-height: 38px;
   color: #D1495B;
 }
@@ -710,7 +729,6 @@ number {
   line-height: 22px;
   margin-left: 32px;
   list-style: disc;
-  padding-bottom: 30px;
 }
 
 /*member
@@ -751,6 +769,10 @@ ________________________*/
   margin: 0 20px;
 }
 
+.member-name-title {
+  height: 20%;
+}
+
 .member-name {
   font-family: "Yu Gothic";
   font-style: normal;
@@ -762,8 +784,12 @@ ________________________*/
   padding-top: 30px;
 }
 
+.member-text-wrapper {
+  display: inline-block;
+  height: 20%;
+}
+
 .member-text {
-  height: 35px;
   font-family: "Yu Gothic";
   font-style: normal;
   font-weight: 500;
@@ -774,6 +800,7 @@ ________________________*/
 }
 
 .member-skills {
+  height: 60%;
   display: flex;
   flex-wrap: wrap;
   padding-top: 4%;
@@ -887,9 +914,18 @@ ________________________*/
 .sns-link {
   display: block;
   width: 100%;
-  height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .sns-link {
+    height: 100%;
+  }
 }
 
 .sns-link-twitter {
   font-size: 173px;
+}
+@media screen and (max-width: 767px) {
+  .sns-link-twitter {
+    font-size: 140px;
+  }
 }
